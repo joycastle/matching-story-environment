@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:8.0.23
+    restart: on-failure:10
+    container_name: mysql-${color}
+    privileged: true
+    ports:
+      - "${port}:3306"
+    networks:
+      ${color}:
+        ipv4_address: ${ip}
+    volumes:
+      - ${path}/conf/my.cnf:/etc/mysql/my.cnf
+      - ${path}/initdb:/docker-entrypoint-initdb.d
+      - ${path}/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+
+networks:
+  ${color}:
+    external: true
