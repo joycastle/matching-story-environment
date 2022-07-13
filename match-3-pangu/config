@@ -1,0 +1,8 @@
+branch=levin-robot
+color=blue
+port=13001
+ip=10.10.10.44
+redis-ip=10.10.10.22
+mysql-ip=10.10.10.11
+pigeon-ip=10.10.10.11
+path=/home/levin/code/matching-story-environment/match-3-pangu/test

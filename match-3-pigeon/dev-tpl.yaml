@@ -1,0 +1,77 @@
+app:
+  # 雪花算法机器码，最大位数6
+  nodeId: 21
+
+  logFile: log/pigeon.log
+  eventLogFile: log/pigeon_event.log
+
+  httpUrl: 0.0.0.0:8088
+  webSocketUrl: 0.0.0.0:8089
+  rpcPort: 9001
+
+  # 开启NaiveAuth
+  #enableNaiveAuth: false
+
+  # MD5 salt
+  salt: Tsukumo
+
+  testInterval: 1000
+
+  # logout 退出时间
+  logoutDelay: 5
+
+  # 服务注册的时间间隔
+  registryInterval: 100
+
+  # 管理界面登陆密码
+  admin:
+    password: "todo"
+
+  # 内网服务验证
+  intranet:
+    password: "todo"
+
+  # 慢sql阈值, 单位ms
+  slowThreshold: 200
+
+  # gorm 日志级别
+  # Silent, Error, Warn, Info
+  gormLogLevel: Info
+
+  # 日志级别
+  # debug, info, warn, error, panic, fatal
+  logLevel: debug
+
+  # 聊天最大消息数
+  maxMessageCount: 500
+
+  # v2接口返回的默认history个数
+  connHistoryCount: 10
+
+  # 用户token过期时间：7day
+  maxTokenLifeTime: 604800
+
+  # 聊天记录保留最大数
+  messageHistoryRetention: 3000
+
+  cron:
+    cleanRedisMessage: "0 0 * * *"
+
+  # coverCache
+  coverCache: true
+
+redis:
+  cluster: false
+  addr: "${redis-ip}:6379"
+  password: ""
+  DB: 0
+  poolSize: 30
+  minIdleConns: 30
+
+mysql:
+  user: admin
+  password: "123456"
+  host: "${mysql-ip}"
+  port: 3306
+  charset: utf8mb4
+  dbName: db_game

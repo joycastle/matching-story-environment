@@ -1,0 +1,13 @@
+# server-lib-redis
+s-redis:
+  default:
+    Addr: "${redis-ip}:6379"
+    Password: ""
+    MaxActive: 64
+    MaxIdle: 16
+    IdleTimeout: 240s
+    ConnectTimeout: 500ms
+    ReadTimeout: 500ms
+    WriteTimeout: 1000ms
+    TestInterval: 60s
+    StatLog: stat

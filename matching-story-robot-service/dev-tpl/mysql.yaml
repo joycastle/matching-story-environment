@@ -1,0 +1,26 @@
+# server-lib-mysql
+s-mysql:
+  default-master:
+    addr: "${mysql-ip}:3306"
+    username: admin
+    password: '123456'
+    database: db_game
+    options: charset=utf8mb4&parseTime=True
+    maxidle: 16
+    maxopen: 64
+    maxlifetime: 300s
+    slowsqltime: 500ms
+    slowlog: slowsql
+    statlog: run
+  default-slave:
+    addr: "${mysql-ip}:3306"
+    username: admin
+    password: '123456'
+    database: db_game
+    options: charset=utf8mb4&parseTime=True
+    maxidle: 16
+    maxopen: 64
+    maxlifetime: 300s
+    slowsqltime: 500ms
+    slowlog: slowsql
+    statlog: run

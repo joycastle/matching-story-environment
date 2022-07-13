@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  pangu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pangu:latest
+    restart: on-failure:10
+    container_name: ${color}-pangu
+    privileged: true
+    ports:
+      - "${port}:3301"
+    expose:
+      - "3302"
+    networks:
+      ${color}:
+        ipv4_address: ${ip}
+    volumes:
+      - ${path}/log:/app/log
+    command: ./pangu -servertype=dev -cname=dev
+
+networks:
+  ${color}:
+    external: true

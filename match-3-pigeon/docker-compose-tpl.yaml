@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  pigeon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pigeon:latest
+    restart: on-failure:10
+    container_name: ${color}-pigeon
+    privileged: true
+    ports:
+      - "${port}:8089"
+    expose:
+      - "8088"
+      - "9001"
+    networks:
+      ${color}:
+        ipv4_address: ${ip}
+    volumes:
+      - ${path}/log:/app/log
+    command: ./match-3-pigeon -env=dev
+
+networks:
+  ${color}:
+    external: true

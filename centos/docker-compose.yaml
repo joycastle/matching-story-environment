@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  centos:
+    image: centos:latest
+    restart: on-failure:10
+    container_name: mycentos
+    privileged: true
+    networks:
+      blue:
+        ipv4_address: 10.10.10.110
+    command: bash -c "while true;do sleep 60;done"
+
+networks:
+  blue:
+    external: true

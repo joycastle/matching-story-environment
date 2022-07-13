@@ -1,0 +1,84 @@
+app:
+  # 雪花算法机器码，最大位数6
+  nodeId: 11
+
+  logFile: log/pangu.log
+  eventLogFile: log/pangu_event.log
+  friendLogFile: log/friend.log
+
+  DbDsn: "admin:123456@tcp(${mysql-ip}:3306)/db_game?charset=utf8mb4&parseTime=True"
+
+  # 缓冲时间
+  bufferSecond: 10
+
+  # MD5 salt
+  salt: "Tsukumo"
+
+  sentry:
+    dsn: "https://5462ca7ada7d4b5993bf9ca34a033b13@o66108.ingest.sentry.io/5916294"
+
+  env: dev
+
+  logLevel: debug
+
+  activityDebugLog: true
+
+  isRelease: false
+
+  # cron job 频率
+  cron:
+    rank: "*/10 * * * *"
+    cleanGuildHelpCount: "0 0 * * 0"
+    guildMemberStat: "0 * * * *"
+    guildKickMember: "*/5 * * * *"
+    genActivityUserRank: "0 */12 * * *"
+
+redis:
+  cluster: false
+  addr: "${redis-ip}:6379"
+  password: ""
+  DB: 0
+  poolSize: 30
+  minIdleConns: 30
+
+
+mysql:
+  batchSize: 100
+
+server:
+  ZoneID: 0
+
+pigeon:
+  rpcHost: ${pigeon-ip}:9001
+
+gm:
+  mainUser: "admin"
+  mainPassword: "3FAE79AAE21D332B947EA11B2F582926"
+  mailTickSec: 10
+
+
+thinkingData:
+  serverUrl: "https://thinkingdatalog.mm.blissgame.net"
+  appKey: "ebefc1fd1dab4403bd22dbc4b0728318"
+
+rpcPort: 3002 
+
+
+# server-lib
+logs:
+  access:
+    output: log/access.log-*-*-*
+    level: ALL
+  rpc-access:
+    output: log/rpc/access.log-*-*-*
+    level: ALL      
+  error:
+    output: log/error.log-*-*-*
+    level: ALL
+    traceoffset: 1
+  user:
+    output: log/user.log-*-*-*
+    level: ALL
+  friend:
+    output: log/friend.log-*-*-*
+    level: ALL

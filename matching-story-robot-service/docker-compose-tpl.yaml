@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  robot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: robot:latest
+    restart: on-failure:10
+    container_name: ${color}-robot
+    privileged: true
+    ports:
+      - "${port}:1122"
+    networks:
+      ${color}:
+        ipv4_address: ${ip}
+    volumes:
+      - ${path}/log:/app/var/logs
+    command: ./matching-story-robot-service -env=dev
+
+networks:
+  ${color}:
+    external: true
