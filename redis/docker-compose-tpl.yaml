@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  redis:
+    image: redis:6.0.6
+    restart: on-failure:10
+    container_name: ${color}-redis
+    privileged: true
+    ports:
+      - "${port}:6379"
+    networks:
+      ${color}:
+        ipv4_address: ${ip}
+    volumes:
+      - ${path}/conf/redis.conf:/etc/redis/redis.conf
+      - ${path}/data:/data
+    command: redis-server /etc/redis/redis.conf
+
+networks:
+  ${color}:
+    external: true

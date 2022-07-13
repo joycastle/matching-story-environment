@@ -1,0 +1,4 @@
+color=blue
+ip=10.10.10.22
+port=16379
+path=/home/levin/code/matching-story-environment/redis/test2
