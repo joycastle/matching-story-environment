@@ -24,6 +24,7 @@ echo \
 "branch=$target_pigeon_branch
 color=$color
 port=$target_pigeon_port
+port2=$target_pigeon_port2
 ip=$target_pigeon_ip
 redis_ip=$target_redis_ip
 mysql_ip=$target_mysql_ip

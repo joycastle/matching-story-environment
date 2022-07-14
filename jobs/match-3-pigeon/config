@@ -1,6 +1,7 @@
 branch=master
 color=blue
 port=18089
+port2=18088
 ip=10.10.10.33
 redis_ip=10.10.10.22
 mysql_ip=10.10.10.11

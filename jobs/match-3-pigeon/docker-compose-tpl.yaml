@@ -10,8 +10,8 @@ services:
     privileged: true
     ports:
       - "${port}:8089"
+      - "${port2}:8088"
     expose:
-      - "8088"
       - "9001"
     environment:
       - TZ=Asia/Shanghai

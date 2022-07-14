@@ -10,6 +10,7 @@ target_redis_port=16379
 target_pigeon_branch=master
 target_pigeon_ip=10.10.10.33
 target_pigeon_port=18089
+target_pigeon_port2=18088
 
 target_pangu_branch=levin-robot
 target_pangu_ip=10.10.10.44
