@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  robot:
+  robot-${color}:
     build:
       context: .
       dockerfile: Dockerfile

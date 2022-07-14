@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  redis:
+  redis-${color}:
     image: redis:6.0.6
     restart: on-failure:10
     container_name: ${color}-redis

@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  mysql:
+  mysql-${color}:
     image: mysql:8.0.23
     restart: on-failure:10
     container_name: ${color}-mysql
