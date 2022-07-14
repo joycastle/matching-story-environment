@@ -6,7 +6,7 @@ app:
   eventLogFile: log/pangu_event.log
   friendLogFile: log/friend.log
 
-  DbDsn: "admin:123456@tcp(${mysql-ip}:3306)/db_game?charset=utf8mb4&parseTime=True"
+  DbDsn: "admin:123456@tcp(${mysql_ip}:3306)/db_game?charset=utf8mb4&parseTime=True"
 
   # 缓冲时间
   bufferSecond: 10
@@ -35,7 +35,7 @@ app:
 
 redis:
   cluster: false
-  addr: "${redis-ip}:6379"
+  addr: "${redis_ip}:6379"
   password: ""
   DB: 0
   poolSize: 30
@@ -49,7 +49,7 @@ server:
   ZoneID: 0
 
 pigeon:
-  rpcHost: ${pigeon-ip}:9001
+  rpcHost: ${pigeon_ip}:9001
 
 gm:
   mainUser: "admin"

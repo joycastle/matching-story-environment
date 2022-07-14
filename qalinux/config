@@ -1,1 +1,20 @@
+color=blue
+target_path=/home/$color
 
+target_mysql_ip=10.10.10.11
+target_mysql_port=13306
+
+target_redis_ip=10.10.10.22
+target_redis_port=16379
+
+target_pigeon_branch=master
+target_pigeon_ip=10.10.10.33
+target_pigeon_port=18089
+
+target_pangu_branch=levin-robot
+target_pangu_ip=10.10.10.44
+target_pangu_port=13001
+
+target_robot_branch=main
+target_robot_ip=10.10.10.55
+target_robot_faketime_port=11122

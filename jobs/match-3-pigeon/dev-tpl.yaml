@@ -62,7 +62,7 @@ app:
 
 redis:
   cluster: false
-  addr: "${redis-ip}:6379"
+  addr: "${redis_ip}:6379"
   password: ""
   DB: 0
   poolSize: 30
@@ -71,7 +71,7 @@ redis:
 mysql:
   user: admin
   password: "123456"
-  host: "${mysql-ip}"
+  host: "${mysql_ip}"
   port: 3306
   charset: utf8mb4
   dbName: db_game

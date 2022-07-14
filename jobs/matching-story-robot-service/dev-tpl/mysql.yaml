@@ -1,7 +1,7 @@
 # server-lib-mysql
 s-mysql:
   default-master:
-    addr: "${mysql-ip}:3306"
+    addr: "${mysql_ip}:3306"
     username: admin
     password: '123456'
     database: db_game
@@ -13,7 +13,7 @@ s-mysql:
     slowlog: slowsql
     statlog: run
   default-slave:
-    addr: "${mysql-ip}:3306"
+    addr: "${mysql_ip}:3306"
     username: admin
     password: '123456'
     database: db_game
