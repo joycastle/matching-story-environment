@@ -66,6 +66,14 @@ if [ "${exist}" != "true" ]; then
 	sleep 1
 fi
 
-sh $jobs_pangu_path/deploy.sh
-sh $jobs_pigeon_path/deploy.sh
-sh $jobs_robot_path/deploy.sh
+if [ "${target_pangu_open}" == "true" ]; then
+	sh $jobs_pangu_path/deploy.sh
+fi
+
+if [ "${target_pigeon_open}" == "true" ]; then
+	sh $jobs_pigeon_path/deploy.sh
+fi
+
+if [ "${target_robot_open}" == "true" ]; then
+	sh $jobs_robot_path/deploy.sh
+fi
