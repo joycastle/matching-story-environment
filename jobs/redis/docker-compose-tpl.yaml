@@ -10,6 +10,8 @@ services:
     networks:
       ${color}:
         ipv4_address: ${ip}
+    environment:
+      - TZ=Asia/Shanghai
     volumes:
       - ${path}/conf/redis.conf:/etc/redis/redis.conf
       - ${path}/data:/data

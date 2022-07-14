@@ -13,6 +13,8 @@ services:
     expose:
       - "8088"
       - "9001"
+    environment:
+      - TZ=Asia/Shanghai
     networks:
       ${color}:
         ipv4_address: ${ip}

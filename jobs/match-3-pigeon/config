@@ -4,4 +4,4 @@ port=18089
 ip=10.10.10.33
 redis-ip=10.10.10.22
 mysql-ip=10.10.10.11
-path=/home/levin/code/matching-story-environment/match-3-pigeon/test
+path=/home/blue/pigeon
